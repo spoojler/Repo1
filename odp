@@ -69,6 +69,10 @@ Zad 6
 	#tworze readme i moj_program.c
 	git add .
 	Odp: Śledzone są moj_program.c oraz .gitignore reszta to pliki .txt, które git ignoruje
+	git add odp
+	git commit -m "pliki nie txt z mojego lokalnego komputera"
+	git push
+	git log
 		
 	
 	
