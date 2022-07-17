@@ -1,0 +1,74 @@
+Zad 1
+	mkdir /home/usr/repozytoriaGIT && mkdir /home/usr/repozytoriaGIT/Repoz1
+	git init
+	#tworzę pliki
+	git status
+	git add one.sh
+	git status
+	git add .
+	git status
+	git commit -m "new files"
+	git log
+	
+Zad 2
+	#edytuje one.sh
+	git status
+	#wpisuje one.sh do readme
+	git add .
+	git commit -m "mod files"
+	git commit --amend
+	#wpisuje pierwsza modyfikacja pliku one.sh
+	git log
+	
+Zad 3
+	git branch mytest1
+	git checkout mytest1
+	#modyfikuje one.sh
+	git status
+	git stash
+	git checkout master
+	git checkout -b newversion
+	#modyfikuje one.sh
+	git commit -a
+	#wpisuje komentarz
+	git log
+	git checkout master
+	git log
+	git merge newversion
+	git branch -d newversion
+
+Zad 4
+	git checkout mytest1
+	git stash apply
+	#dopisuje w one.sh
+	git commit -a
+	#wpisuje komentarz
+	git checkout master
+	git merge mytest1
+	#conflict:
+		git checkout mytest1
+		#poprawiam one.sh
+		git commit -a
+		#komentarz
+	git checkout master
+	git merge mytest1
+	git branch -d mytest1
+	#sa zmiany w pliku one.sh
+	git log
+	git stash dropn
+	
+Zad 5
+	git clone https://...
+	#tworze 3 nowe pliki
+	git add .
+	git commit -m "pliki txt z mojego lokalnego komputera"
+
+Zad 6
+	git pull
+	git merge mojskrot/master (wyrzuca blad - to nie jest cos co mozna scalic)
+	#tworze readme i moj_program.c
+	git add .
+	Odp: Śledzone są moj_program.c oraz .gitignore reszta to pliki .txt, które git ignoruje
+		
+	
+	
